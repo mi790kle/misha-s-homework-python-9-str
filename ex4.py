@@ -3,6 +3,7 @@ first_name: str = input("What is your first name? ")
 while True:
     country : str = input("What is your country? Use not more than 2 letters ")
     if country.isalpha() == True and len(country) < 3:
+        country = country.upper()
         break
     else:
         print("invalid country")
@@ -13,7 +14,7 @@ while True:
         break
     else:
         print("invalid zipcode")
-print(f"FOR:{last_name.isupper()}, {first_name.islower()}")
-print(f"COUNTRY:{country.isupper()} ")
-print(f"CITY ADDRESS:{city_address}")
+print(f"FOR:{last_name.upper()}, {first_name.lower()}")
+print(f"COUNTRY:{country} ")
+print(f"CITY ADDRESS:{city_address.title()}")
 print(f"ZIPCODE:{zipcode}")
